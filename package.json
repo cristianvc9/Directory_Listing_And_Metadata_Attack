@@ -1,0 +1,28 @@
+{
+  "name": "acosta",
+  "version": "1.0.0",
+  "description": "Acosta",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelikJosh/Acosta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BelikJosh/Acosta/issues"
+  },
+  "homepage": "https://github.com/BelikJosh/Acosta#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "serve-index": "^1.9.1",
+    "sharp": "^0.34.4"
+  }
+}
