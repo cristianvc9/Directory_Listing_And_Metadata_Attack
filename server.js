@@ -35,7 +35,7 @@ app.use(
 );
 
 // ----------------------------------------------------
-// RUTAS ORIGINALES
+//                  RUTAS ORIGINALES
 // ----------------------------------------------------
 
 // Servir archivos estáticos desde /public
@@ -52,9 +52,9 @@ app.use(
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// Ruta index: servir index.html que está EN LA RAÍZ del proyecto
+// Ruta index: servir sitio.html que está EN LA RAÍZ del proyecto
 app.get("/", (req, res) => {
-    return res.sendFile(path.join(__dirname, "index.html"));
+    return res.sendFile(path.join(__dirname, "sitio.html"));
 });
 
 // POST /upload -> subir imagen y guardar con metadatos
@@ -73,7 +73,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
         const fileName = `img_${Date.now()}${fileExtension}`;
         const filePath = path.join(UPLOADS_DIR, fileName);
 
-        // Usamos fs.writeFileSync en lugar de sharp
+        // Usamos fs.writeFileSync
         fs.writeFileSync(filePath, req.file.buffer);
         // --------------------
 

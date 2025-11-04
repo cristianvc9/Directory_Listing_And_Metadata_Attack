@@ -718,14 +718,14 @@
 
         if (result.success) {
           // Mostrar mensaje de éxito
-          showNotification('✅ Reseña publicada correctamente', 'success');
+          showNotification('Reseña publicada correctamente', 'success');
           form.reset();
           await loadImages();
         } else {
           throw new Error(result.error || 'Error al subir la imagen');
         }
       } catch (error) {
-        showNotification('❌ Error: ' + error.message, 'error');
+        showNotification('Error: ' + error.message, 'error');
         console.error('Error:', error);
       } finally {
         // Restaurar botón
